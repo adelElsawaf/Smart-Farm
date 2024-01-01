@@ -1,23 +1,21 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 function MainNavBar() {
+    const router = useRouter()
+    console.log(router.pathname)
     return (
         <>
-            <nav class="navbar navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="false">
-                <div class="container-fluid py-1 px-3 justify-content-end">
-                    <div class="navbar mt-sm-0 mt-2 me-md-0 me-sm-4 row">
-                        <div class="col-8">
-                            <div class="input-group">
-                                <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" placeholder="Type here..." />
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <a href="javascript:;" class="nav-link text-white p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa fa-bell cursor-pointer"></i>
-                                <span class="m-1">Alerts</span>
-                            </a>
-                        </div>
+
+            <nav class="navbar navbar-expand-lg container-fluid px-0 mx-4 shadow-none py-3 border-radius-xl" id="navbarBlur" data-scroll="false">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar" aria-controls="navBar" aria-expanded="true" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div className="collapse navbar-collapse" id="#navBar">
+                        <Link href='/' class={(router.pathname == "/" ? " active " : "") + "btn btn-outline-light me-3"}> Dashboard </Link>
+                        <Link href='/disease_detection' class={(router.pathname == "/disease_detection" ? " active " : "") + "btn btn-outline-light me-3"}>Disease detection</Link>
+                        <Link href='/water_quality' class={(router.pathname.includes("/water_quality") ? " active " : "") + "btn btn-outline-light me-3"} >Water Quality </Link>
                     </div>
-                </div>
             </nav>
         </>
     )
