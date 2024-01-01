@@ -1,19 +1,33 @@
-function Card (){
-    return(<>
-    <div class="card">
-            <div class="card-body p-3">
-                  <div class="numbers">
-                    <p class="text-sm mb-3 text-uppercase font-weight-bold">Today's Money</p>
-                    <h5 class="font-weight-bolder">
-                      $53,000
-                    </h5>
-                    <p class="mb-0">
-                      <span class="text-success text-sm font-weight-bolder">+55%</span>
-                      since yesterday
-                    </p>
-              </div>
-            </div>
-          </div>
-          </>)
+import { useState } from "react";
+
+
+function EachCard({ title, Data, time, date }) {
+  function handleTextColours() {
+    let textColorsClassName = []
+    if (title.includes("Warning")) {
+      textColorsClassName.push("text-warning")
+    }
+    else if (title.includes("Danger")) {
+      textColorsClassName.push("text-danger")
+    }
+    else if (title.includes("Normal")) {
+      textColorsClassName.push("text-primary")
+    }
+    return textColorsClassName
+  }
+
+  return (<>
+    <div class="card my-3 shadow-lg text-center">
+      <div class={"card-body "} >
+        <div className="row ">
+          <h5 className="col text-secondary">Time : {time}</h5>
+          <h5 className="col text-secondary">Date : {date}</h5>
+        </div>
+        <i className={handleTextColours() + " " + "fa-solid fa-bell fa-2xl pb-4"}> </i>
+        <h4 className={handleTextColours() + " " + "card-title  col"}>{title}</h4>
+        <h1 className={handleTextColours()}>{Data}</h1>
+      </div>
+    </div >
+  </>)
 }
-export default Card;
+export default EachCard;

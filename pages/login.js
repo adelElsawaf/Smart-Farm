@@ -22,7 +22,7 @@ function Login() {
                                     <h3>Sign In</h3>
                                 </blockquote>
                                 <figcaption class="blockquote-footer">
-                                    Enter you email address to sign in
+                                    Enter you Username  to sign in
                                 </figcaption>
                             </figure>
                         </div>
@@ -32,20 +32,20 @@ function Login() {
                                     <input type="text" class="form-control form-control-lg" placeholder="Username" aria-label="Email" />
                                 </div>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control form-control-lg" placeholder="Password" aria-label="Password" />
+                                    <input type="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" />
                                 </div>
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" id="rememberMe" />
                                     <label class="form-check-label" for="rememberMe">Remember me</label>
                                 </div>
                                 <div class="text-center">
-                                    <button type="button" class="btn btn-lg btn-success btn-lg w-100 mt-4 mb-0">Sign in</button>
+                                    <a href='/' type="button" class="btn btn-lg btn-success btn-lg w-100 mt-4 mb-0">Sign in</a>
                                 </div>
                             </form>
                             <div class="card-footer text-center pt-0 px-lg-2 px-1">
                                 <p class="mb-4 text-sm mx-auto">
                                     Don't have an account?
-                                    <a href="javascript:;" class="text-primary text-gradient font-weight-bold">Sign up</a>
+                                    <a href="/register" class="text-primary text-gradient font-weight-bold">Sign up</a>
                                 </p>
                             </div>
                         </div>

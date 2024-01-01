@@ -53,9 +53,9 @@ function Register() {
                                     <input type="password" class="form-control" placeholder="Password" aria-label="Password" />
                                 </div>
                                 <div class="text-center">
-                                    <button type="button" class="btn btn-lg btn-success btn-lg w-100 mt-4 mb-0">Sign Up</button>
+                                    <a href ="\login" type="button" class="btn btn-lg btn-success btn-lg w-100 mt-4 mb-0">Sign Up</a>
                                 </div>
-                                <p class="text-sm  mb-0">Already have an account? <a href="javascript:;" class="font-weight-bolder text-primary">Sign in</a></p>
+                               
                             </form>
                         </div>
                     </div>

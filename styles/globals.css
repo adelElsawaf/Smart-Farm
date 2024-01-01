@@ -14,7 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
-
+.fs-very-large
+{
+  font-size: 7vw;
+  font-weight: 600;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
